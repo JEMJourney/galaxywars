@@ -8,6 +8,7 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
 
 var platforms;
 var player;
+var stars;
 
 var cursors;
 
@@ -26,8 +27,10 @@ function create() {
 
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 
+	//Background
 	game.add.sprite(0, 0, 'sky');
 
+	//Platforms
 	platforms = game.add.group();
 
 	platforms.enableBody = true;
@@ -46,6 +49,21 @@ function create() {
 
 	ledge.body.immovable = true;
 
+	//Stars
+	stars = game.add.group();
+	stars.enableBody = true;
+
+	for (var i = 0; i < 12; i++) {
+		
+		var star = stars.create(i * 70, 0, 'star');
+
+		star.body.gravity.y = 6;
+
+		star.body.bounce.y = 0.7 + Math.random() * 0.2;
+
+	}
+
+	//Player
 	player = game.add.sprite(32, game.world.height - 150, 'player');
 
 	game.physics.arcade.enable(player);
