@@ -52,7 +52,7 @@ Splash.prototype = {
 		this.loadGameStates();
 		
 		setTimeout(function() {
-			game.state.start('InGame');
+			game.state.start('Title');
 		}, 3000);
 	}
 
