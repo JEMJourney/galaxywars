@@ -77,6 +77,9 @@ function create() {
 function update() {
 
 	game.physics.arcade.collide(player, platforms);
+	game.physics.arcade.collide(stars, platforms);
+
+	game.physics.arcade.overlap(player, stars, collectStar, null, this);
 
 	player.body.velocity.x = 0;
 
@@ -89,5 +92,11 @@ function update() {
 	if(cursors.up.isDown && player.body.touching.down) {
 		player.body.velocity.y = -350;
 	}
+
+}
+
+function collectStar(player, star) {
+
+	star.kill();
 
 }
