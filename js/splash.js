@@ -16,13 +16,15 @@ Splash.prototype = {
 	},
 
 	preload: function() {
-		
 
 		game.add.sprite(0, 0, 'bgloading');
 
 		var status = game.add.text(game.world.centerX, game.world.centerY, 'Loading....', {
 			fill: '#ffffff'
 		});
+
+		this.loadScripts();
+		this.loadImages();
 
 
 	},
