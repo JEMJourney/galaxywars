@@ -1,4 +1,8 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '');
+var game = new Phaser.Game(800, 600, Phaser.AUTO, 'galaxywars');
+
+game.scale.pageAlignHorizontally = true;
+game.scale.pageAlignVertically = true;
+game.scale.refresh();
 
 var Main = function() {};
 
