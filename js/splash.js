@@ -39,6 +39,7 @@ Splash.prototype = {
 			font: '64px ka1',
 			fill: '#ffffff'
 		});
+		status.anchor(0.5);
 
 		this.loadScripts();
 		this.loadImages();
