@@ -9,6 +9,8 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
 var platforms;
 var player;
 
+var cursors;
+
 function preload() {
 
 	game.load.image('star', 'assets/star.png');
@@ -19,6 +21,8 @@ function preload() {
 }
 
 function create() {
+
+	cursors = game.input.keyboard.createCursorKeys();
 
 	game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -53,5 +57,19 @@ function create() {
 }
 
 function update() {
+
+	game.physics.arcade.collide(player, platforms);
+
+	player.body.velocity.x = 0;
+
+	if(cursors.left.isDown) {
+		player.body.velocity.x = -150;
+	} else if(cursors.right.isDown) {
+		player.body.velocity.x = 150;
+	}
+
+	if(cursors.up.isDown && player.body.touching.down) {
+		player.body.velocity.y = -350;
+	}
 
 }
