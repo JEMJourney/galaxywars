@@ -42,7 +42,7 @@ function create() {
 
 	ledge.body.immovable = true;
 
-	player = game.add.sprite(32, game.world.height - 15, 'player');
+	player = game.add.sprite(32, game.world.height - 150, 'player');
 
 	player.body.bounce.y = 0.2;
 	player.body.gravity.y = 300;
