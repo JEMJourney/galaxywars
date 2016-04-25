@@ -4,7 +4,7 @@ Splash.prototype = {
 
 	loadScripts: function() {
 
-		game.load.script('splash', 'js/splash.js');
+		game.load.script('ingame', 'js/ingame.js');
 
 	},
 
