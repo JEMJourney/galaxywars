@@ -4,26 +4,39 @@ Splash.prototype = {
 
 	loadScripts: function() {
 
+		game.load.script('splash', 'js/splash.js');
+
 	},
 
 	loadImages: function() {
+
+		game.load.image('ship', 'assets/ship.png');
+		game.load.image('bg', 'assets/bg.png');
 
 	},
 
 	preload: function() {
 		
 
-		var loadingBar = game.add.sprite(game.world.centerX, 400, "loading");
+		game.add.sprite(0, 0, 'bgloading');
 
-		var status = game.add.text(game.world.centerX, 380, 'Loading....', {
+		var status = game.add.text(game.world.centerX, game.world.centerY, 'Loading....', {
 			fill: '#ffffff'
 		});
 
-		this.load.setPreloadSprite(loadingBar);
 
-		this.loadScripts();
-		this.loadImages();
+	},
 
+	loadGameStates: function() {
+		game.state.add('InGame', InGame);
+	},
+
+	create: function() {
+		this.loadGameStates();
+		
+		setTimeout(function() {
+			game.state.start('InGame');
+		}, 3000);
 	}
 
 };
