@@ -2,6 +2,13 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '');
 
 var Main = function() {};
 
+WebFontConfig = {
+	custom: {
+		families: ['ka1'],
+		urls: ['assets/fonts/ka1.css']
+	}
+};
+
 Main.prototype = {
 
 	preload: function() {

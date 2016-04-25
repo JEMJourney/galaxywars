@@ -17,14 +17,6 @@ Splash.prototype = {
 	},
 
 	loadFonts: function() {
-
-		WebFontConfig = {
-			custom: {
-				families: ['ka1'],
-				urls: ['assets/fonts/ka1.css']
-			}
-		};
-
 	},
 
 	preload: function() {

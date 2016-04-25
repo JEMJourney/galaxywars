@@ -11,6 +11,7 @@ InGame.prototype = {
 			font: '64px ka1'
 			fill: '#ffffff'
 		});
+		status.anchor.set(0.5);
 
 
 	}
