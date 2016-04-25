@@ -12,7 +12,7 @@ Splash.prototype = {
 	loadImages: function() {
 
 		game.load.image('ship', 'assets/ship.png');
-		game.load.image('bg', 'assets/bg.png');
+		game.load.image('bg', 'assets/background.png');
 
 	},
 
