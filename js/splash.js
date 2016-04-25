@@ -21,7 +21,7 @@ Splash.prototype = {
 		WebFontConfig = {
 			custom: {
 				families: ['ka1'],
-				urls: ['assets/fonts/ka1.css'];
+				urls: ['assets/fonts/ka1.css']
 			}
 		};
 
