@@ -2,7 +2,6 @@ var Title = function() {};
 
 Title.prototype = {
 
-
 	create: function() {
 
 		game.add.sprite(0, 0, 'bg');
