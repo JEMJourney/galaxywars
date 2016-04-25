@@ -5,7 +5,7 @@ var Main = function() {};
 Main.prototype = {
 
 	preload: function() {
-		game.load.image('bgloading', 'assets/backgroundloading.png');
+		game.load.image('bg', 'assets/background.png');
 		game.load.image('loading', 'assets/loading.png');
 		game.load.script('splash', 'js/splash.js');
 		game.load.script("webfont", "//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js");

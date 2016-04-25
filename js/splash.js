@@ -6,18 +6,18 @@ Splash.prototype = {
 
 		game.load.script('ingame', 'js/ingame.js');
 		game.load.script('title', 'js/title.js');
-		game.load.script('WebFont', 'js/webfontloader.js');
-
+		
 	},
 
 	loadImages: function() {
 
 		game.load.image('ship', 'assets/ship.png');
-		game.load.image('bg', 'assets/background.png');
 
 	},
 
 	loadFonts: function() {
+
+		game.load.script('WebFont', 'js/webfontloader.js');
 
 		WebFontConfig = {
 			custom: {
@@ -31,15 +31,17 @@ Splash.prototype = {
 
 	preload: function() {
 
-		game.add.sprite(0, 0, 'bgloading');
+		game.add.sprite(0, 0, 'bg');
+
+		this.loadFonts();
 
 		var status = game.add.text(game.world.centerX, game.world.centerY, 'Loading....', {
+			font: '64px ka1',
 			fill: '#ffffff'
 		});
 
 		this.loadScripts();
 		this.loadImages();
-		this.loadFonts();
 
 	},
 
@@ -53,7 +55,7 @@ Splash.prototype = {
 		
 		setTimeout(function() {
 			game.state.start('Title');
-		}, 3000);
+		}, 1000);
 	}
 
 };
