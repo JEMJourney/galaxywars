@@ -10,6 +10,9 @@ var platforms;
 var player;
 var stars;
 
+var score = 0;
+var scoreText;
+
 var cursors;
 
 function preload() {
@@ -68,9 +71,16 @@ function create() {
 
 	game.physics.arcade.enable(player);
 
-	player.body.bounce.y = 0.2;
+	player.body.bounce.y = 0;
 	player.body.gravity.y = 300;
 	player.body.collideWorldBounds = true;
+
+	//Score display
+
+	scoreText = game.add.text(16, 16, 'Score: 0', {
+		fontSize: '32px',
+		fill: '#000'
+	});
 
 }
 
@@ -98,5 +108,8 @@ function update() {
 function collectStar(player, star) {
 
 	star.kill();
+
+	score += 10;
+	scoreText.text = 'Score: ' + score; 
 
 }
