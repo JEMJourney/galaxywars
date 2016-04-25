@@ -5,6 +5,7 @@ Splash.prototype = {
 	loadScripts: function() {
 
 		game.load.script('ingame', 'js/ingame.js');
+		game.load.script('WebFont', 'js/webfontloader.js');
 
 	},
 
@@ -12,6 +13,17 @@ Splash.prototype = {
 
 		game.load.image('ship', 'assets/ship.png');
 		game.load.image('bg', 'assets/bg.png');
+
+	},
+
+	loadFonts: function() {
+
+		WebFontConfig = {
+			custom: {
+				families: ['ka1'],
+				urls: ['assets/fonts/ka1.css'];
+			}
+		};
 
 	},
 

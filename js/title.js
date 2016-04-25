@@ -7,7 +7,7 @@ InGame.prototype = {
 
 		game.add.sprite(0, 0, 'bg');
 
-		var status = game.add.text(game.world.centerX, game.world.centerY, 'Hallo Welt!', {
+		var status = game.add.text(game.world.centerX, game.world.centerY, 'Galaxy Wars', {
 			fill: '#ffffff'
 		});
 

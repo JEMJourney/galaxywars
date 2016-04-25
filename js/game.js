@@ -8,6 +8,7 @@ Main.prototype = {
 		game.load.image('bgloading', 'assets/backgroundloading.png');
 		game.load.image('loading', 'assets/loading.png');
 		game.load.script('splash', 'js/splash.js');
+		game.load.script("webfont", "//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js");
 	},
 
 	create: function() {
