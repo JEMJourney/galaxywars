@@ -1,6 +1,6 @@
-var InGame = function() {};
+var Title = function() {};
 
-InGame.prototype = {
+Title.prototype = {
 
 
 	create: function() {

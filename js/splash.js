@@ -5,6 +5,7 @@ Splash.prototype = {
 	loadScripts: function() {
 
 		game.load.script('ingame', 'js/ingame.js');
+		game.load.script('ingame', 'js/title.js');
 		game.load.script('WebFont', 'js/webfontloader.js');
 
 	},
@@ -44,6 +45,7 @@ Splash.prototype = {
 
 	loadGameStates: function() {
 		game.state.add('InGame', InGame);
+		game.state.add('Title', Title);
 	},
 
 	create: function() {
