@@ -27,4 +27,5 @@ Title.prototype = {
 
 function onStartClick() {
 	clickSound.play();
+	game.state.start('InGame');
 }
