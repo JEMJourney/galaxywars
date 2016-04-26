@@ -1,5 +1,7 @@
 var Title = function() {};
 
+var start;
+
 Title.prototype = {
 
 	create: function() {
@@ -12,7 +14,13 @@ Title.prototype = {
 		});
 		status.anchor.set(0.5);
 
+		start = game.add.button(game.world.centerX, 300, 'button', start, 'start');
 
+
+	},
+
+	start: function() {
+		console.log("Start clicked");
 	}
 
 };
