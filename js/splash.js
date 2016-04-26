@@ -17,6 +17,12 @@ Splash.prototype = {
 
 	},
 
+	loadSounds: function() {
+
+		game.load.audio('buttonClick', 'assets/sound/select.wav');
+
+	},
+
 	loadFonts: function() {
 		WebFontConfig = {
 			custom: {
@@ -39,6 +45,7 @@ Splash.prototype = {
 		this.loadScripts();
 		this.loadImages();
 		this.loadFonts();
+		this.loadSounds();
 
 	},
 

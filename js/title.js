@@ -2,6 +2,8 @@ var Title = function() {};
 
 var start;
 
+var clickSound;
+
 Title.prototype = {
 
 	create: function() {
@@ -17,10 +19,12 @@ Title.prototype = {
 		start = game.add.button(game.world.centerX, 300, 'button', onStartClick, this, 'start', 'start', 'start');
 		start.anchor.set(0.5);
 
+		clickSound = game.add.audio('buttonClick');
+
 	}
 
 };
 
 function onStartClick() {
-	console.log("Start clicked");
+	clickSound.play();
 }
