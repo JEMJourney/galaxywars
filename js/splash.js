@@ -13,7 +13,7 @@ Splash.prototype = {
 	loadImages: function() {
 
 		game.load.image('ship', 'assets/ship.png');
-		game.load.atlas('buttons', 'assets/buttons.png', 'assets/buttons.json');
+		game.load.atlas('button', 'assets/buttons.png', 'assets/buttons.json');
 
 	},
 
