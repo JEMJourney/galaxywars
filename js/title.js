@@ -17,10 +17,10 @@ Title.prototype = {
 		start = game.add.button(game.world.centerX, 300, 'button', onStartClick, this, 'start', 'start', 'start');
 		start.anchor.set(0.5);
 
-	},
-
-	onStartClick: function() {
-		console.log("Start clicked");
 	}
 
 };
+
+function onStartClick() {
+	console.log("Start clicked");
+}
